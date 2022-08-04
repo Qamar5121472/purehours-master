@@ -3,11 +3,12 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:purehours/auth/welcome.dart';
 import 'package:purehours/auth/login.dart';
 import 'package:purehours/auth/signup.dart';
-import 'package:purehours/user/addActivity';
+import './user/addActivity.dart';
 import 'package:purehours/screens/meeting.dart';
 import 'package:purehours/screens/meeting_screen.dart';
 import 'package:purehours/screens/youtube_screen.dart';
 import 'package:purehours/user/AppUsageSetting.dart';
+import 'package:purehours/user/addActivity.dart';
 import 'package:purehours/user/addSubject.dart';
 import 'package:purehours/user/addskills.dart';
 import 'package:purehours/user/daySelection.dart';
@@ -44,20 +45,21 @@ class RouteGenrator {
       case '/Resources':
         return MaterialPageRoute(builder: (_) => const TimetableScreen());
       case '/Entertainment':
-        return MaterialPageRoute(builder: (_) =>  const YoutubePlayerDemo(title: 'Youtube'));
+        return MaterialPageRoute(
+            builder: (_) => const YoutubePlayerDemo(title: 'Youtube'));
       case '/Zoom Meetings':
-        return MaterialPageRoute(builder: (_) =>  MeetingScreen());
+        return MaterialPageRoute(builder: (_) => MeetingScreen());
       case '/Your Skills':
         return MaterialPageRoute(builder: (_) => const Skills());
       case '/Usage':
-        return MaterialPageRoute(builder: (_) => AppUsageScreen());
+        return MaterialPageRoute(builder: (_) => const AppUsageScreen());
       case '/Skills':
         return MaterialPageRoute(builder: (_) => const AddSkills());
-        case '/Subjectadd':
+      case '/Subjectadd':
         return MaterialPageRoute(builder: (_) => const AddSubject());
       case '/timerScreen':
         return MaterialPageRoute(builder: (_) => const tm.timerScreen());
-        case '/Activity':
+      case '/Activity':
         return MaterialPageRoute(builder: (_) => const AddActivity());
       default:
         return _routeNotExist();

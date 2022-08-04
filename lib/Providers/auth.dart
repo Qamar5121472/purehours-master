@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
-import '../model/http_exception.dart';
 
 class Auth with ChangeNotifier {
   String? _token;
@@ -45,7 +44,7 @@ class Auth with ChangeNotifier {
       );
       final responseData = json.decode(response.body);
       if (responseData['error'] != null) {
-        throw HttpException(responseData['error']['message']);
+        // throw HttpException(responseData['error']['message']);
       }
       _token = responseData['idToken'];
       _userId = responseData['localId'];
@@ -77,7 +76,7 @@ class Auth with ChangeNotifier {
       );
       final responseData = json.decode(response.body);
       if (responseData['error'] != null) {
-        throw HttpException(responseData['error']['message']);
+        // throw HttpException(responseData['error']['message']);
       }
       _token = responseData['idToken'];
       _userId = responseData['localId'];
