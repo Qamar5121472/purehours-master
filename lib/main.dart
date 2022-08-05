@@ -8,7 +8,6 @@ import 'package:flutter_background_service_ios/flutter_background_service_ios.da
 import 'package:purehours/user/usageScreen.dart';
 import 'dart:io';
 import 'dart:async';
-import 'package:provider/provider.dart';
 import 'package:purehours/utils/notifications.dart';
 
 void main() async {

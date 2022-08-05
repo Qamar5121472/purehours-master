@@ -1,7 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:purehours/screens/meeting_screen.dart';
+import 'package:purehours/screens/src/pages/index.dart';
 
 class Meeting extends StatelessWidget {
   const Meeting({Key? key}) : super(key: key);
@@ -12,15 +13,18 @@ class Meeting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  GetMaterialApp(
-        title: 'Join Meeting',
-        home: Container(
-          child: ElevatedButton(
-            onPressed: (){
-              // Navigator.of(context).pushNamed('/timerScreen'),
-              Get.to(()=>MeetingScreen());
-            }, child: Text('Join'),
-          ),
-        ),
+        title: 'Meeting',
+            home: IndexPage()
+            
+            
+            // Container(
+            //   child: ElevatedButton(
+            //     onPressed: (){
+            //       // Navigator.of(context).pushNamed('/timerScreen'),
+            //       Get.to(()=>IndexPage());
+            //     }, child: Text('Video call'),
+            //   ),
+            // ),
       );
   }
 }
