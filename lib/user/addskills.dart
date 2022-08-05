@@ -75,7 +75,7 @@ class _AddSkillsState extends State<AddSkills> {
                         padding: const EdgeInsets.all(16.0),
                         child: ElevatedButton(
                           onPressed: () async {
-                            await skill.add({
+                            await skill.doc().set({
                               'skillname':name,
                               'skilldeficulty': deficulty
                             }).then((value) => print('Subject Added'));

@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:purehours/widgets/scaffold.dart';
 
 class AddActivity extends StatefulWidget {
@@ -76,7 +75,7 @@ class _AddActivityState extends State<AddActivity> {
                         padding: const EdgeInsets.all(16.0),
                         child: ElevatedButton(
                           onPressed: () async {
-                            await skill.add({
+                            await skill.doc().set({
                               'name':name,
                               'time': deficulty
                             }).then((value) => print('Activity Added'));
